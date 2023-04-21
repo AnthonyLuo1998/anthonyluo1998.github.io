@@ -67,5 +67,15 @@
       <a-entity camera></a-entity>
     </a-scene>
 
+    <script>
+      AFRAME.registerComponent('markerhandler', {
+        init: function () {
+          this.el.sceneEl.addEventListener('markerFound', () => {
+            // redirect to custom URL
+            alert("找到了")
+          });
+        }
+      });
+    </script>
   </body>
 </html>
